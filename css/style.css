@@ -4,7 +4,6 @@
 
 html,body {
   margin: 0px;
-  background-color: #f25c5d;
 }
 
 body{
@@ -63,17 +62,17 @@ h2 {
   margin-top: 3%;
   color: #b2b2b2;
 }
-.tab-pills {
+.tabs {
   padding: 0px;
   margin-bottom: 0px;
   margin-top: 5%;
 }
-.nav-tabs .tab-pills li {
+.nav-tabs .tabs li {
   display: inline-block;
   font-size: 15px;
   text-align: center;
 }
-li.active a {
+li a.active {
   background-color: #f25c5d;
   color: #fff;
 }
@@ -83,7 +82,7 @@ li a {
   display: inline-block;
   width: 124px;
 }
-li.active > a:hover {
+li a.active:hover {
   color: #fff;
 }
 li > a:hover {
@@ -91,17 +90,28 @@ li > a:hover {
 }
 .container {
   width: 100%;
+  background-color: #f25c5d;
 }
 .content-wrapper {
   width: 900px;
   margin: auto;
-  margin-top: 5%;
   color: #fff;
+}
+.content-wrapper .wrapper {
+  width: 100%;
+  padding-top: 5%;
 }
 .para-text {
   margin-top: 5%;
   text-align: justify;
   line-height: 1.5;
+  min-height: 100px;
+}
+.tabcontent {
+  display: none;
+}
+.tabcontent:nth-child(1) {
+  display: block;
 }
 .footer div {
   display: inline-block;
@@ -129,6 +139,9 @@ background-color: #f25c5d;
 .icon-circle a:hover i {
   color: #fff;
 }
+.footer {
+  padding-bottom: 50px;
+}
 .footer-icons i {
   color: #f25c5d;
   font-size: 24px;
@@ -148,4 +161,10 @@ background-color: #f25c5d;
   position: absolute;
   bottom: 11px;
   left: 11px;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  .nav-tabs {
+    display: none;
+  }
 }
