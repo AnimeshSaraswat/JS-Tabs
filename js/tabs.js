@@ -3,7 +3,6 @@ function switchTab(evt, tabName) {
   tabcontent = document.getElementsByClassName('tabcontent');
   for(i = 0; i < tabcontent.length; i++)
     {
-      alert("hello");
       tabcontent[i].style.display = "none";
     }
   tablink = document.getElementsByClassName("tablink");
