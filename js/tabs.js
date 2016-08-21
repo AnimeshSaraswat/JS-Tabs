@@ -12,4 +12,5 @@ function switchTab(evt, tabName) {
     }
   document.getElementById(tabName).style.display = "block";
   evt.currentTarget.className += " active";
+  document.getElementById('print-head').innerHTML = evt.target.innerHTML;
 }

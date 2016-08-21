@@ -59,13 +59,27 @@ h2 {
 .heading-container {
   width: 900px;
   margin: auto;
-  margin-top: 3%;
+  margin-top: 25px;
   color: #b2b2b2;
+}
+/*Hide checkbox*/
+input[type=checkbox]{
+    display: none;
+}
+
+/*Show menu when invisible checkbox is checked*/
+input[type=checkbox]:checked ~ #menu{
+    display: block;
+}
+.mobile-visible-head {
+  display: none;
 }
 .tabs {
   padding: 0px;
+  margin: 0% auto;
   margin-bottom: 0px;
-  margin-top: 5%;
+  width: 900px;
+  padding-top: 3%;
 }
 .nav-tabs .tabs li {
   display: inline-block;
@@ -163,8 +177,105 @@ background-color: #f25c5d;
   left: 11px;
 }
 
+/* media qy=uery for Tab screens */
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
-  .nav-tabs {
+  .show-menu {
     display: none;
+  }
+  .nav-tabs {
+    width: 124px;
+    padding: 0;
+    float: left;
+  }
+  h2 {
+    line-height: 1.4;
+  }
+  .mobile-visible-head {
+    display: none;
+  }
+  .heading-container {
+    width: 100%;
+    padding-left: 5%;
+    margin: 2% 0%;
+  }
+  .tabs {
+    width: 100%;
+    padding: 0px;
+  }
+  .container {
+    float: right;
+    width: calc(100% - 124px);
+  }
+  .content-wrapper {
+    width: 100%;
+  }
+  .content-wrapper .wrapper {
+    width: 85%;
+    padding-top: 5%;
+    margin: 0 auto;
+  }
+}
+
+/*media query for mobile screens */
+@media only screen and (max-width: 768px) {
+  span {
+    position: absolute;
+    right: 10%;
+    top: 6%;
+  }
+  span div {
+    background-color: #393939;
+    height: 5px;
+    width: 25px;
+    border-radius: 2px;
+    margin-bottom: 3px;
+  }
+  .mobile-visible-head {
+    display: block;
+  }
+  .heading-container {
+    width: 100%;
+  }
+  .heading {
+    padding-left: 5%;
+  }
+  h2 {
+    font-size: 20px;
+    margin-top: 3%;
+  }
+  .mobile-visible-head {
+    background-color: #393939;
+  }
+  .mobile-visible-head h3 {
+    display: block;
+    margin: 0px;
+    padding: 2%;
+    color: #7b7b7b;
+  }
+  .show-menu {
+    display: block;
+  }
+  ul {
+    position: static;
+    display: none;
+  }
+  .nav-tabs .tabs li {
+    width: 100%;
+  }
+  .tabs {
+    width: 100%;
+  }
+  li a {
+    width: 100%;
+    padding: 3% 0%;
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+  }
+  .content-wrapper {
+    width: 100%;
+  }
+  .content-wrapper .wrapper {
+    width: 90%;
+    margin: 0 auto;
   }
 }

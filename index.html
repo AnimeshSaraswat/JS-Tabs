@@ -13,18 +13,29 @@
         <div class="heading">
           <h2>Responsive Tab style menu UI</h2>
         </div>
-        <div class="nav-tabs">
-          <ul class="tabs">
-            <li><a href="#" class="active tablink" onclick="switchTab(event, 'Home')"><b>Home</b></a></li>
-            <li><a href="#" class="tablink" onclick="switchTab(event, 'Tab1')"><b>Tab 1</b></a></li>
-            <li><a href="#" class="tablink" onclick="switchTab(event, 'Tab2')"><b>Tab 2</b></a></li>
-            <li><a href="#" class="tablink" onclick="switchTab(event, 'Tab3')"><b>Tab 3</b></a></li>
-            <li><a href="#" class="tablink" onclick="switchTab(event, 'Tab4')"><b>Tab 4</b></a></li>
-            <li><a href="#" class="tablink" onclick="switchTab(event, 'Tab5')"><b>Tab 5</b></a></li>
-            <li><a href="#" class="tablink" onclick="switchTab(event, 'Tab6')"><b>Tab 6</b></a></li>
-          </ul>
-        </div>
       </div>
+    </div>
+    <div class="nav-tabs">
+      <label for="show-menu" class="show-menu">
+        <span>
+          <div></div>
+          <div></div>
+          <div></div>
+        </span>
+      </label>
+      <input type="checkbox" id="show-menu" role="button">
+      <ul class="tabs" id="menu">
+        <li><a href="#" class="active tablink" onclick="switchTab(event, 'Home')"><b>Home</b></a></li>
+        <li><a href="#" class="tablink" onclick="switchTab(event, 'Tab1')"><b>Tab 1</b></a></li>
+        <li><a href="#" class="tablink" onclick="switchTab(event, 'Tab2')"><b>Tab 2</b></a></li>
+        <li><a href="#" class="tablink" onclick="switchTab(event, 'Tab3')"><b>Tab 3</b></a></li>
+        <li><a href="#" class="tablink" onclick="switchTab(event, 'Tab4')"><b>Tab 4</b></a></li>
+        <li><a href="#" class="tablink" onclick="switchTab(event, 'Tab5')"><b>Tab 5</b></a></li>
+        <li><a href="#" class="tablink" onclick="switchTab(event, 'Tab6')"><b>Tab 6</b></a></li>
+      </ul>
+    </div>
+    <div class="mobile-visible-head">
+      <h3 id="print-head">Home</h3>
     </div>
     <div class="container">
       <div class="content-wrapper">
