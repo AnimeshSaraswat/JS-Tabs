@@ -86,20 +86,20 @@ input[type=checkbox]:checked ~ #menu{
   font-size: 15px;
   text-align: center;
 }
-li a.active {
+.tabs li a.active {
   background-color: #f25c5d;
   color: #fff;
 }
-li a {
+.tabs li a {
   padding: 15% 0%;
   color: #5c5c5c;
   display: inline-block;
   width: 124px;
 }
-li a.active:hover {
+.tabs li a.active:hover {
   color: #fff;
 }
-li > a:hover {
+.tabs li > a:hover {
   color: #f25c5d;
 }
 .container {
@@ -130,54 +130,21 @@ li > a:hover {
 .footer div {
   display: inline-block;
 }
-.icon-circle {
-  width: 50px;
-  height: 50px;
-  background-color: #fff;
-  border-radius: 50%;
-  border: 3px solid #fff;
-  transition: all 0.4s ease-in-out;
-  position: relative;
-  margin-right: 10px;
+.footer-icons {
+  padding: 0;
 }
-.icon-circle a {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  border-radius: 50%;
-  transition: all 1s ease-in-out;
+.follow-icon:hover .circle-transition {
+  transform: scale(0);
 }
-.icon-circle a:hover {
-background-color: #f25c5d;
-}
-.icon-circle a:hover i {
+.follow-icon:hover .fa {
   color: #fff;
 }
 .footer {
   padding-bottom: 50px;
 }
-.footer-icons i {
-  color: #f25c5d;
-  font-size: 24px;
-  display: inherit;
-}
-.facebook i {
-  position: absolute;
-  bottom: 10px;
-  left: 15px;
-}
-.github i {
-  position: absolute;
-  bottom: 10px;
-  left: 11px;
-}
-.linkedin i {
-  position: absolute;
-  bottom: 11px;
-  left: 11px;
-}
 
-/* media qy=uery for Tab screens */
+
+/* media query for Tab screens */
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
   .show-menu {
     display: none;
@@ -215,15 +182,48 @@ background-color: #f25c5d;
     margin: 0 auto;
   }
 }
+.follow-icon {
+  width: 60px;
+  height: 60px;
+  text-align: center;
+  border-radius: 50%;
+  border: 3px solid #fff;
+  float: left;
+  margin: 12px 18px 12px 0;
+  position: relative;
+}
+.circle-transition {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  display: inline-block;
+  border-radius: 50%;
+  background-color: #fff;
+  transition: all 0.4s ease-in-out;
+  margin-top: -30px;
+  margin-left: -30px;
+  top: 50%;
+  left: 50%;
+}
+.follow-icon > .fa {
+  color: #f25c5d;
+  font-size: 25px;
+  line-height: 60px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  transition: all 0.4s ease-in-out;
+}
 
 /*media query for mobile screens */
-@media only screen and (max-width: 768px) {
-  span {
+@media only screen and (max-width: 767px) {
+  .hamburger {
     position: absolute;
     right: 10%;
     top: 6%;
   }
-  span div {
+  .hamburger div {
     background-color: #393939;
     height: 5px;
     width: 25px;
@@ -265,7 +265,7 @@ background-color: #f25c5d;
   .tabs {
     width: 100%;
   }
-  li a {
+  .tabs li a {
     width: 100%;
     padding: 3% 0%;
     border-top: 1px solid #eee;
