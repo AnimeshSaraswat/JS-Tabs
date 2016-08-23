@@ -135,12 +135,47 @@ input[type=checkbox]:checked ~ #menu{
 }
 .follow-icon:hover .circle-transition {
   transform: scale(0);
+  opacity: 0;
 }
 .follow-icon:hover .fa {
   color: #fff;
 }
 .footer {
   padding-bottom: 50px;
+}
+.follow-icon {
+  width: 60px;
+  height: 60px;
+  text-align: center;
+  border-radius: 50%;
+  border: 3px solid #fff;
+  float: left;
+  margin: 12px 18px 12px 0;
+  position: relative;
+}
+.circle-transition {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  display: inline-block;
+  border-radius: 50%;
+  background-color: #fff;
+  transition: all 0.5s ease-in-out;
+  margin-top: -30px;
+  margin-left: -30px;
+  top: 50%;
+  left: 50%;
+  /*opacity: 1;*/
+}
+.follow-icon > .fa {
+  color: #f25c5d;
+  font-size: 25px;
+  line-height: 60px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  transition: all 0.5s ease-in-out;
 }
 
 
@@ -182,39 +217,7 @@ input[type=checkbox]:checked ~ #menu{
     margin: 0 auto;
   }
 }
-.follow-icon {
-  width: 60px;
-  height: 60px;
-  text-align: center;
-  border-radius: 50%;
-  border: 3px solid #fff;
-  float: left;
-  margin: 12px 18px 12px 0;
-  position: relative;
-}
-.circle-transition {
-  position: absolute;
-  width: 60px;
-  height: 60px;
-  display: inline-block;
-  border-radius: 50%;
-  background-color: #fff;
-  transition: all 0.4s ease-in-out;
-  margin-top: -30px;
-  margin-left: -30px;
-  top: 50%;
-  left: 50%;
-}
-.follow-icon > .fa {
-  color: #f25c5d;
-  font-size: 25px;
-  line-height: 60px;
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 0;
-  transition: all 0.4s ease-in-out;
-}
+
 
 /*media query for mobile screens */
 @media only screen and (max-width: 767px) {
@@ -267,12 +270,17 @@ input[type=checkbox]:checked ~ #menu{
   }
   .tabs {
     width: 100%;
+    position: absolute;
+    z-index: 1;
+    background-color: #fff;
+    transition: all 0.4s ease;
   }
   .tabs li a {
     width: 100%;
     padding: 3% 0%;
     border-top: 1px solid #eee;
     border-bottom: 1px solid #eee;
+    transition: all 0.5s ease;
   }
   .content-wrapper {
     width: 100%;
